@@ -1,5 +1,19 @@
 <?php
+// GET['page']取得
+$GET = h((!empty($_GET["page"])) ? $_GET["page"]: '');
 
-echo (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+switch ($GET) {
+    case 'cart':
+        include_once './view/cart.php';
+        break;
+    
+    default:
+        include_once './view/top.php';
+        break;
+}
 
-include_once './view/top.php';
+// TODO:関数多けりゃまとめることね
+function h($str)
+{
+    return htmlspecialchars($str, ENT_QUOTES);
+}
