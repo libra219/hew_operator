@@ -31,6 +31,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
+                        <h3><a class="btn btn-primary btn-lg" href="./index.php" role="button">TOP</a></h3>
                         <h3><a class="btn btn-primary btn-lg" href="#" role="button">商品入力</a></h3>
                     </div>
                     <div class="col">

@@ -1,0 +1,44 @@
+body, input {
+  font-size:14pt
+}
+input, label {
+  vertical-align:middle
+}
+.qrcode-text {
+  padding-right:1.7em; margin-right:0
+}
+/* .qrcode-text-btn {
+  display:inline-block; 
+  background:url(//dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg) 50% 50% no-repeat;
+  height:1em; width:1.7em; margin-left:-1.7em; cursor:pointer
+}
+.qrcode-text-btn > input[type=file] {
+  position:absolute; overflow:hidden;
+  width:1px; height:1px; opacity:0
+} */
+.hidden{
+  visibility: hidden;
+}
+body{
+  width: 750px;
+  margin: auto;
+}
+label > input {
+  display:none;	/* アップロードボタンのスタイルを無効にする */
+}
+label {
+  width: 600px;
+  height: 100px;
+  display: inline-block;
+  color: #884898;	/* ラベルテキストの色を指定する */
+  background-color: #fff799;/* ラベルの背景色を指定する */
+  border: double 4px #AAAAAA;/* ラベルのボーダーを指定する */
+}
+p{
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  left: 250px;
+  top: 20px;
+  transform: rotate(-15deg);
+}
