@@ -79,6 +79,7 @@
                                         <span class="input-group-text" id="basic-addon1">￥</span>
                                     </div>
                                     <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                                    <input type="submit" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="清算" value="清算">
                                 </div>
                                 </td>
                             </tr>
