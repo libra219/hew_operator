@@ -11,12 +11,13 @@ function h($str)
 // 処理記述
 
 
+
 // 表示するpage処理
 switch ($GET) {
     case 'cart':
         include_once './view/cart.php';
         break;
-    
+
     default:
         include_once './view/top.php';
         break;
