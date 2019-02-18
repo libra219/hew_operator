@@ -14,9 +14,12 @@ function h($str)
 
 // 表示するpage処理
 switch ($GET) {
-    case 'cart':
-        include_once './view/cart.php';
+    case 'pcart':
+        include_once './pcart.php';
         break;
+    case 'scart':
+            include_once './scart.php';
+            break;
 
     default:
         include_once './view/top.php';
