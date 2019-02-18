@@ -55,20 +55,31 @@
                             </tr>
                         </thead>
                         <tbody>
+                          <?php
+                            $c=1;
+                            $sum=0;
+                            foreach ($product_list as $product):
+                          ?>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>テーブルのセル</td>
-                                <td>123</td>
-                                <td>123</td>
-                                <td>123</td>
+                                <th scope="row"><?php echo $c++;?></th>
+                                <td><?=$product["item_name"] ?></td>
+                                <td><?=$product["price"] ?></td>
+                                <td><?=$product["cnt"] ?></td>
+                                <td>￥<?php
+                                      echo intval($product["price"])*intval($product["cnt"]);
+                                      $sum+=intval($product["price"])*intval($product["cnt"]);
+                                    ?></td>
                             </tr>
+                          <?php endforeach; ?>
                             <tr class="table-info">
                                 <td colspan="3"></td>
                                 <td>税額</td>
+                                <td>￥<?php echo $sum*0.08; ?></td>
                             </tr>
                             <tr >
                                 <td colspan="3"></td>
                                 <td class="table-info">合計金額</td>
+                                <td>￥<?php echo $sum*1.08; ?></td>
                             </tr>
                             <tr>
                                 <td colspan="3"></td>
@@ -78,13 +89,13 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">￥</span>
                                     </div>
-                                    <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                                    <form method="post" action="?page=scart">
+                                      <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                                      <input type="submit" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="清算" value="清算">
+                                      <input type="hidden" name="sum" value="<?php echo $sum*1.08; ?>">
+                                    </form>
                                 </div>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td colspan="3"></td>
-                                <td class="table-info">お釣り</td>
                             </tr>
                         </tbody>
                     </table>

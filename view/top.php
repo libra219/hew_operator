@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="col">
                         <h3><a class="btn btn-primary btn-lg" href="#" role="button">商品入力</a></h3>
-                        <h3><a class="btn btn-primary btn-lg" href="?page=cart" role="button">カート</a></h3>
+                        <h3><a class="btn btn-primary btn-lg" href="?page=pcart" role="button">カート</a></h3>
                     </div>
                     <div class="col">
                         <h3><a class="btn btn-warning " href="#" role="button">在庫確認</a></h3>
@@ -51,7 +51,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    
+
                 </div>
             </div>
         </div>

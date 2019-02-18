@@ -35,11 +35,8 @@ foreach ($list as $l) {
   }
   $i++;
 }
-// foreach ($d as $da) {
-//   $product_list[][]=$da;
-// }
-// $product_list[][]=$l[1];
 mysqli_close($link);
-var_dump($product_list);
+session_start();
+$_SESSION['p']=$product_list;
 require_once 'view/cart.php';
 ?>

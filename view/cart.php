@@ -89,9 +89,10 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">￥</span>
                                     </div>
-                                    <form method="post" action="cart2.php">
+                                    <form method="post" action="?page=scart">
                                       <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
                                       <input type="submit" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="清算" value="清算">
+                                      <input type="hidden" name="sum" value="<?php echo $sum*1.08; ?>">
                                     </form>
                                 </div>
                                 </td>
