@@ -24,19 +24,8 @@
             <div class="jumbotron mt-4">
                 <h2 class="disply-4">商品一覧</h2>
                 <hr clas="my-4">
-                <div class="row my-5">
-                    <div class="col">
-                        <h3><a class="btn btn-primary btn-lg w-100" href="#" role="button">QRコード読み込み</a></h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <h3><a class="btn btn-primary btn-lg" href="./index.php" role="button">TOP</a></h3>
-                        <h3><a class="btn btn-primary btn-lg" href="#" role="button">商品入力</a></h3>
-                    </div>
-                    <div class="col">
-                        <h3><a class="btn btn-warning " href="#" role="button">在庫確認</a></h3>
-                    </div>
+                <div class="col">
+                    <h3><a class="btn btn-warning " href="./index.php" role="button">TOPに戻る</a></h3>
                 </div>
             </div>
         </div>
@@ -44,7 +33,6 @@
             <div class="row">
                 <div class="col-12">
                     <table class="table">
-                        <caption>カートの中身</caption>
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -58,16 +46,16 @@
                           <?php
                             $c=1;
                             $sum=0;
-                            foreach ($product_list as $product):
+                            foreach ($list as $li):
                           ?>
                             <tr>
                                 <th scope="row"><?php echo $c++;?></th>
-                                <td><?=$product["item_name"] ?></td>
-                                <td><?=$product["price"] ?></td>
-                                <td><?=$product["cnt"] ?></td>
+                                <td><?=$li["item_name"] ?></td>
+                                <td><?=$li["price"] ?></td>
+                                <td><?=$li["cnt"] ?></td>
                                 <td>￥<?php
-                                      echo intval($product["price"])*intval($product["cnt"]);
-                                      $sum+=intval($product["price"])*intval($product["cnt"]);
+                                      echo intval($li["price"])*intval($li["cnt"]);
+                                      $sum+=intval($li["price"])*intval($li["cnt"]);
                                     ?></td>
                             </tr>
                           <?php endforeach; ?>
@@ -84,18 +72,12 @@
                             <tr>
                                 <td colspan="3"></td>
                                 <td class="table-info">お預かり金額</td>
-                                <td>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">￥</span>
-                                    </div>
-                                    <form method="post" action="?page=scart">
-                                      <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                                      <input type="submit" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="清算" value="清算">
-                                      <input type="hidden" name="sum" value="<?php echo $sum*1.08; ?>">
-                                    </form>
-                                </div>
-                                </td>
+                                 <td>￥<?php echo $liq; ?></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"></td>
+                                <td class="table-info">お釣り</td>
+                                 <td>￥<?php echo $cha; ?></td>
                             </tr>
                         </tbody>
                     </table>

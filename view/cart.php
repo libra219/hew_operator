@@ -24,7 +24,7 @@
             <div class="jumbotron mt-4">
                 <h2 class="disply-4">商品一覧</h2>
                 <hr clas="my-4">
-                <div class="row my-5">
+                <!-- <div class="row my-5">
                     <div class="col">
                         <h3><a class="btn btn-primary btn-lg w-100" href="#" role="button">QRコード読み込み</a></h3>
                     </div>
@@ -37,14 +37,13 @@
                     <div class="col">
                         <h3><a class="btn btn-warning " href="#" role="button">在庫確認</a></h3>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <table class="table">
-                        <caption>カートの中身</caption>
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -90,9 +89,8 @@
                                         <span class="input-group-text" id="basic-addon1">￥</span>
                                     </div>
                                     <form method="post" action="?page=scart">
-                                      <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                                      <input type="submit" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="清算" value="清算">
-                                      <input type="hidden" name="sum" value="<?php echo $sum*1.08; ?>">
+                                      <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="Liq">
+                                      <input type="submit" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="sub" value="清算">
                                     </form>
                                 </div>
                                 </td>
@@ -108,3 +106,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 </html>
+<?php
+$_SESSION['p']=$product_list;
+$_SESSION['sum']=$sum*1.08;
+?>
