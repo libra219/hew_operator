@@ -1,7 +1,7 @@
   <?php
   session_start();
   if(!empty($_POST['shine'])){
-    $post_list=/*$_POST['shine'];*/"huto/3,gomi/2,jijii/5,mikku/11,";
+    $post_list=$_POST['shine'];
     $item_list =explode(",",$post_list);
     foreach ($item_list as $a) {
       if(strcmp($a, "") == 0){
@@ -30,7 +30,7 @@
     $i=0;
     foreach ($list as $l) {
       foreach ($data_list as $d){
-        if($d["item_name"]==$l[0]){
+        if($d["id"]==$l[0]){
           $product_list[$i]=$d;
           $product_list[$i]["cnt"]=$l[1];
         }
