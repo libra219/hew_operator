@@ -34,7 +34,7 @@
                                 <input id="file_upload" type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1>
                             </label>       
                             <input class="hidden" type=text name="cn">
-                        <input type="submit" name="submid" value="QR読み取り" class="btn btn-primary btn-lg w-100" role="button">
+                        <input type="submit" name="submid" value="会計" class="btn btn-primary btn-lg w-100" role="button">
                         </form>
                     </div>
                 </div>
