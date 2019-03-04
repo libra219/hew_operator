@@ -5,7 +5,11 @@ input, label {
   vertical-align:middle
 }
 .qrcode-text {
-  padding-right:1.7em; margin-right:0
+  margin-top: -90px;
+  padding-right:2.5em; margin-right:0
+}
+.qrcode-text:active{
+  color: brown;
 }
 /* .qrcode-text-btn {
   display:inline-block; 
@@ -27,7 +31,7 @@ label{
   margin: 22px auto;
     padding: 15px;
     border-radius: 4px;
-    width: 650px;
+    width: 620px;
     text-align: center;
     display: block;
     background-color: #f1f1f1;
