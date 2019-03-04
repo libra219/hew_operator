@@ -23,22 +23,18 @@ body{
   width: 750px;
   margin: auto;
 }
-label > input {
-  display:none;	/* アップロードボタンのスタイルを無効にする */
+label{
+  margin: 22px auto;
+    padding: 15px;
+    border-radius: 4px;
+    width: 650px;
+    text-align: center;
+    display: block;
+    background-color: #f1f1f1;
+    color: #73a9ff;
+    box-shadow:  0 2px 6px rgba(146, 146, 146, 0.8);
+    cursor: pointer;
 }
-label {
-  width: 600px;
-  height: 100px;
-  display: inline-block;
-  color: #884898;	/* ラベルテキストの色を指定する */
-  background-color: #fff799;/* ラベルの背景色を指定する */
-  border: double 4px #AAAAAA;/* ラベルのボーダーを指定する */
-}
-p{
-  display: inline-block;
-  position: relative;
-  font-size: 30px;
-  left: 250px;
-  top: 20px;
-  transform: rotate(-15deg);
+#file_upload{
+  display: none;
 }

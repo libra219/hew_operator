@@ -30,7 +30,7 @@
                         <form name="myform" onsubmit="return checkText()" method="post" action="?page=pcart">
                         <input type=text size=50 placeholder="Tracking Code" class="qrcode-text" name="shine">
                             <label class=qrcode-text-btn for="file_upload">
-                                <p>QRコード読み込み</p>
+                                QRコード読み込み
                                 <input id="file_upload" type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1>
                             </label>       
                             <input class="hidden" type=text name="cn">
