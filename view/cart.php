@@ -108,5 +108,6 @@
 </html>
 <?php
 $_SESSION['p']=$product_list;
-$_SESSION['sum']=$sum*1.08;
+$_SESSION['sum']=$sum;
+$_SESSION['id']=$id_l[0];
 ?>

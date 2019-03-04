@@ -1,7 +1,8 @@
   <?php
   session_start();
   if(!empty($_POST['shine'])){
-    $post_list=$_POST['shine'];
+    $id_l=explode("_",$_POST['shine'];
+    $post_list=$id_l[1];
     $item_list =explode(",",$post_list);
     foreach ($item_list as $a) {
       if(strcmp($a, "") == 0){
