@@ -32,6 +32,9 @@
     foreach ($list as $l) {
       foreach ($data_list as $d){
         if($d["id"]==$l[0]){
+          if(intval($d["stock"])-intval($d["reserve"])<$l[1]){
+            $l[1]=intval($d["stock"])-intval($d["reserve"]);
+          }
           $product_list[$i]=$d;
           $product_list[$i]["cnt"]=$l[1];
         }

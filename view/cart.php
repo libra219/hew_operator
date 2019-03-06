@@ -58,6 +58,7 @@
                             $c=1;
                             $sum=0;
                             foreach ($product_list as $product):
+                                if($product["cnt"]!=0):
                           ?>
                             <tr>
                                 <th scope="row"><?php echo $c++;?></th>
@@ -69,7 +70,9 @@
                                       $sum+=intval($product["price"])*intval($product["cnt"]);
                                     ?></td>
                             </tr>
-                          <?php endforeach; ?>
+                          <?php 
+                            endif;
+                            endforeach; ?>
                             <tr class="table-info">
                                 <td colspan="3"></td>
                                 <td>税額</td>
