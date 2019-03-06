@@ -55,9 +55,11 @@
       exit;
     }
     while($data=mysqli_fetch_assoc($result)){
-      $amount=intval($data);
+      $amount=intval($data['sales_amount']);
     }
-       $sql="UPDATE sales_amount SET ".$amount+$yen." WHERE event_id=".$sale_id.";";
+    $sum_s=$amount+$yen;
+    $sum_s=strval($sum_s);
+       $sql="UPDATE sales_amount SET sales_amount = ".$sum_s." WHERE event_id=".$sale_id.";";
       $result=mysqli_query($link,$sql);
       if(!$result){
         exit;
