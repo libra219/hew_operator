@@ -3,6 +3,7 @@
   if(!empty($_POST['shine'])){
     $id_l=explode("_",$_POST['shine']);
     $post_list=$id_l[1];
+    $id_list=explode(".",$id_l[0]);
     $item_list =explode(",",$post_list);
     foreach ($item_list as $a) {
       if(strcmp($a, "") == 0){

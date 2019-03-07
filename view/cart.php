@@ -112,5 +112,6 @@
 <?php
 $_SESSION['p']=$product_list;
 $_SESSION['sum']=$sum;
-$_SESSION['id']=$id_l[0];
+$_SESSION['id']=$id_list[0];
+$_SESSION['flg']=$id_list[1];
 ?>

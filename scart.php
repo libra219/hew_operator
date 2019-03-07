@@ -4,6 +4,7 @@
   $sum=intval($_SESSION['sum'])*1.08;
   $yen=intval($_SESSION['sum']);
   $sale_id=$_SESSION['id'];
+  $flg=$_SESSION['flg'];
   $_SESSION=array();
   if(isset($_COOKIE[session_name()])){
     setcookie(session_name(),'',time()-42000);
@@ -37,13 +38,15 @@
     }
     $i=0;
     foreach($list as $l){
-      $a=intval($data_list[$i]['reserve'])-intval($l['cnt']);
-      $b=intval($data_list[$i]['stock'])-intval($l['cnt']);
-      $sql="UPDATE item SET reserve = ".$a." WHERE item.id = ".++$i.";";
-      $result=mysqli_query($link,$sql);
-      if(!$result){
-        exit;
+      if($flg==1){
+        $a=intval($data_list[$i]['reserve'])-intval($l['cnt']);
+        $sql="UPDATE item SET reserve = ".$a." WHERE item.id = ".++$i.";";
+        $result=mysqli_query($link,$sql);
+        if(!$result){
+          exit;
+        }
       }
+      $b=intval($data_list[$i]['stock'])-intval($l['cnt']);
       $sql="UPDATE item SET stock = ".$b." WHERE item.id = ".$i.";";
       $result=mysqli_query($link,$sql);
       if(!$result){
