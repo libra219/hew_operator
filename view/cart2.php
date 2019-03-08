@@ -62,12 +62,12 @@
                             <tr class="table-info">
                                 <td colspan="3"></td>
                                 <td>税額</td>
-                                <td>￥<?php echo $sum*0.08; ?></td>
+                                <td>￥<?php echo intval($sum*0.08); ?></td>
                             </tr>
                             <tr >
                                 <td colspan="3"></td>
                                 <td class="table-info">合計金額</td>
-                                <td>￥<?php echo $sum*1.08; ?></td>
+                                <td>￥<?php echo intval($sum*1.08); ?></td>
                             </tr>
                             <tr>
                                 <td colspan="3"></td>

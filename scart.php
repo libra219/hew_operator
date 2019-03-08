@@ -1,4 +1,5 @@
 <?php
+$amount=0;
   session_start();
   $list=$_SESSION['p'];
   $sum=intval($_SESSION['sum'])*1.08;
@@ -18,7 +19,7 @@
     header('location:?page=pcart');
     exit;
   }
-  $cha=$liq-$sum;
+  $cha=intval($liq)-intval($sum);
 
   $link = mysqli_connect('localhost','root','','hew');
   if(!$link){
@@ -58,7 +59,7 @@
       exit;
     }
     while($data=mysqli_fetch_assoc($result)){
-      $amount=intval($data['sales_amount']);
+      $amount+=intval($data['sales_amount']);
     }
     $sum_s=$amount+$yen;
     $sum_s=strval($sum_s);

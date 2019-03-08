@@ -76,22 +76,23 @@
                             <tr class="table-info">
                                 <td colspan="3"></td>
                                 <td>税額</td>
-                                <td>￥<?php echo $sum*0.08; ?></td>
+                                <td>￥<?php echo intval($sum*0.08); ?></td>
                             </tr>
                             <tr >
                                 <td colspan="3"></td>
                                 <td class="table-info">合計金額</td>
-                                <td>￥<?php echo $sum*1.08; ?></td>
+                                <td>￥<?php echo intval($sum*1.08); ?></td>
                             </tr>
                             <tr>
                                 <td colspan="3"></td>
                                 <td class="table-info">お預かり金額</td>
                                 <td>
                                 <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">￥</span>
-                                    </div>
+                                    
                                     <form method="post" action="?page=scart">
+                                        <div class="input-group-prepend">
+                                            <span style="" class="input-group-text" id="basic-addon1">￥</span>
+                                        </div>
                                       <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="Liq">
                                       <input type="submit" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="sub" value="清算">
                                     </form>
