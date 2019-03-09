@@ -5,8 +5,7 @@ input, label {
   vertical-align:middle
 }
 .qrcode-text {
-  margin-top: -90px;
-  padding-right:2.5em; margin-right:0
+  margin-top: -25px;
 }
 .qrcode-text:active{
   color: brown;
@@ -31,7 +30,7 @@ label{
   margin: 22px auto;
     padding: 15px;
     border-radius: 4px;
-    width: 620px;
+    width: 100%;
     text-align: center;
     display: block;
     background-color: #f1f1f1;

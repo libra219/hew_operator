@@ -16,6 +16,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">    <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="./view/css/reader.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/maechabin/bootstrap-material-button-color/master/dist/cb-materialbtn.0.5.5.min.css">
 
 </head>
 <body>
@@ -28,13 +29,15 @@
                 <div class="row my-5">
                     <div class="col">
                         <form name="myform" onsubmit="return checkText()" method="post" action="?page=pcart">
-                        <input type=text size=50 placeholder="Tracking Code" class="qrcode-text" name="shine">
-                            <label class=qrcode-text-btn for="file_upload">
-                                QRコード読み込み
-                                <input id="file_upload" type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1>
-                            </label>       
-                            <input class="hidden" type=text name="cn">
-                        <input type="submit" name="submid" value="会計" class="btn btn-primary btn-lg w-100" role="button">
+                        <div class="form-group">
+                            <input type=text size=50 placeholder="Tracking Code" class="qrcode-text form-control" name="shine" readonly>
+                                <label class=qrcode-text-btn for="file_upload">
+                                    QRコード読み込み
+                                    <input id="file_upload" type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1>
+                                </label>       
+                                <input class="hidden" type=text name="cn">
+                            <input type="submit" name="submid" value="会計" class="btn btn-cyan500_rsd btn-lg w-100" role="button">
+                        </div>
                         </form>
                     </div>
                 </div>
