@@ -11,21 +11,24 @@
     <!-- JS -->
 
     <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/maechabin/bootstrap-material-button-color/master/dist/cb-materialbtn.0.5.5.min.css">
+
     <style>
     table { table-layout: fixed; }
     table th, table td { overflow: hidden; }
     </style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">    <link rel="shortcut icon" href="">
+
 </head>
 <body>
     <!-- main -->
     <div class="section">
         <div class="container">
             <div class="jumbotron mt-4">
-                <h2 class="disply-4">商品一覧</h2>
+                <h2 class="disply-4">清算</h2>
                 <hr clas="my-4">
                 <div class="col">
-                    <h3><a class="btn btn-warning " href="./index.php" role="button">TOPに戻る</a></h3>
+                    <h3><a class="btn btn-warning " href="./index.php" role="button">QRコード読み取りに戻る</a></h3>
                 </div>
             </div>
         </div>
@@ -35,11 +38,11 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th style="width: 40px" scope="col">#</th>
                                 <th scope="col">商品名</th>
-                                <th>価格</th>
-                                <th>個数</th>
-                                <th>小計</th>
+                                <th style="width: 80px"scope="col">価格</th>
+                                <th style="width: 10%" scope="col">個数</th>
+                                <th style="width: 35%"scope="col">小計</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -76,7 +79,7 @@
                             </tr>
                             <tr>
                                 <td colspan="3"></td>
-                                <td class="table-info">お釣り</td>
+                                <td class="table-info ">お釣り</td>
                                  <td>￥<?php echo $cha; ?></td>
                             </tr>
                         </tbody>
