@@ -27,8 +27,15 @@
             <div class="jumbotron mt-4">
                 <h2 class="disply-4">清算</h2>
                 <hr clas="my-4">
-                <div class="col">
-                    <h3><a class="btn btn-warning " href="./index.php" role="button">QRコード読み取りに戻る</a></h3>
+                <div class="row">
+                    <div class="col">
+                        <a class="btn btn-warning " href="./index.php" role="button">QRコード読み取りに戻る</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="text-info pt-3">ご購入ありがとうございました。</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,24 +69,24 @@
                                     ?></td>
                             </tr>
                           <?php endforeach; ?>
-                            <tr class="table-info">
-                                <td colspan="3"></td>
-                                <td>税額</td>
+                            <tr >
+                                <td colspan="2"></td>
+                                <td colspan="2" class="table-info">税額</td>
                                 <td>￥<?php echo intval($sum*0.08); ?></td>
                             </tr>
                             <tr >
-                                <td colspan="3"></td>
-                                <td class="table-info">合計金額</td>
+                                <td colspan="2"></td>
+                                <td colspan="2" class="table-info">合計金額</td>
                                 <td>￥<?php echo intval($sum*1.08); ?></td>
                             </tr>
                             <tr>
-                                <td colspan="3"></td>
-                                <td class="table-info">お預かり金額</td>
+                                <td colspan="2"></td>
+                                <td colspan="2" class="table-info">お預かり金額</td>
                                  <td>￥<?php echo $liq; ?></td>
                             </tr>
                             <tr>
-                                <td colspan="3"></td>
-                                <td class="table-info ">お釣り</td>
+                                <td colspan="2"></td>
+                                <td colspan="2" class="table-info ">お釣り</td>
                                  <td>￥<?php echo $cha; ?></td>
                             </tr>
                         </tbody>
