@@ -30,13 +30,13 @@
                     <div class="col">
                         <form name="myform" onsubmit="return checkText()" method="post" action="?page=pcart">
                         <div class="form-group">
-                            <input type=text size=50 placeholder="Tracking Code" class="qrcode-text form-control" name="shine" readonly>
+                            <input type=text size=50 placeholder="QR Code" class="qrcode-text form-control" name="shine" readonly>
                                 <label class=qrcode-text-btn for="file_upload">
                                     QRコード読み込み
                                     <input id="file_upload" type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1>
                                 </label>       
                                 <input class="hidden" type=text name="cn">
-                            <input type="submit" name="submid" value="会計" class="btn btn-cyan500_rsd btn-lg w-100" role="button">
+                            <input type="submit" name="submid" value="会計へ" class="btn btn-cyan500_rsd btn-lg w-100" role="button">
                         </div>
                         </form>
                     </div>
