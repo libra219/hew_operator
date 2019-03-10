@@ -28,7 +28,12 @@
                 <hr clas="my-4">
                 <div class="row">
                     <div class="col">
-                        <p class="text-info">金額の入力間違いないようにご注意ください。</p>
+                        <a class="btn btn-warning " href="./index.php" role="button">QRコード読み取りに戻る</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="text-warning pt-3">金額の入力間違いないようにご注意ください。</p>
                     </div>
                 </div>
                 <!-- 
