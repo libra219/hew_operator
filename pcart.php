@@ -39,16 +39,18 @@
           $product_list[$i]=$d;
           $product_list[$i]["cnt"]=$l[1];
         }
-     }
+      }
     $i++;
     }
     mysqli_close($link);
   }else{
-   if(!empty($_POST['submid'])){
+    if(!empty($_POST['submid'])){
     header('location:?page=index');
     exit;
-  }
+    }
     $product_list=$_SESSION['pro'];
+    $id_list[0]=$_SESSION['id'];
+    $id_list[1]=$_SESSION['flg'];
   }
 
 

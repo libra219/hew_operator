@@ -15,7 +15,8 @@ $amount=0;
   if($sum>$liq){
     session_start();
     $_SESSION['pro']=$list;
-
+    $_SESSION['id']=$sale_id;
+    $_SESSION['flg']=$flg;
     header('location:?page=pcart');
     exit;
   }
