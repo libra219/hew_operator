@@ -4,7 +4,7 @@ function openQRCamera(node) {
     node.value = "";
     qrcode.callback = function (res) {
       if (res instanceof Error) {
-        alert("No QR code found. Please make sure the QR code is within the camera's frame and try again.");
+        alert("QRコードが見つかりません。 QRコードがカメラのフレーム内にあることを確認してから、もう一度やり直してください。");
       } else {
         node.parentNode.previousElementSibling.value = res;
       }
@@ -31,5 +31,5 @@ function checkText() {
   document.myform.action = "./?page=pcart";
 }
 function showQRIntro() {
-  return confirm("Use your camera to take a picture of a QR code.");
+  return confirm("カメラが立ち上がります。QRコードを撮影してください。");
 }
