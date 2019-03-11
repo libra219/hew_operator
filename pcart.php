@@ -1,4 +1,5 @@
   <?php
+  require_once './config.php';
   session_start();
   if(!empty($_POST['shine'])){
     $id_l=explode("_",$_POST['shine']);
@@ -13,7 +14,7 @@
     }
 
     $product_list=array();
-    $link = mysqli_connect('localhost','root','','hew');
+    $link = mysqli_connect(DNS,USERNAME,PASSWORD,'hew');
     if(!$link){
       exit;
     }

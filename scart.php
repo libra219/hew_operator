@@ -1,5 +1,6 @@
 <?php
 $amount=0;
+  require_once './config.php';
   session_start();
   $list=$_SESSION['p'];
   $sum=intval($_SESSION['sum'])*1.08;
@@ -22,7 +23,7 @@ $amount=0;
   }
   $cha=intval($liq)-intval($sum);
 
-  $link = mysqli_connect('localhost','root','','hew');
+  $link = mysqli_connect(DNS,USERNAME,PASSWORD,'hew');
   if(!$link){
     exit;
   }
